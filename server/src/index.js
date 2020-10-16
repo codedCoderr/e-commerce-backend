@@ -6,7 +6,8 @@ const cors = require("cors");
 
 const authRoutes = require("./routes/auth");
 const adminAuthRoutes=require('./routes/admin/auth');
-const categoryRoutes=require('./routes/category')
+const categoryRoutes=require('./routes/category');
+const productRoutes=require('./routes/product');
 
 env.config();
 
@@ -35,6 +36,7 @@ app.get("/", async (req, res, next) => {
 app.use("/api", authRoutes);
 app.use('/api',adminAuthRoutes);
 app.use('/api',categoryRoutes);
+app.use('/api',productRoutes);
 
 const PORT = process.env.PORT;
 
