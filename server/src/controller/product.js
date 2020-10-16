@@ -26,6 +26,6 @@ exports.createProduct = (req, res) => {
         message: error.message,
       });
     }
-    res.status(200).json({ product });
+    res.status(201).json({ product });
   });
 };
